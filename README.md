@@ -1,25 +1,25 @@
 <!-- PROJECT SHIELDS -->
 <a name="readme-top"></a>
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Main Branch](https://github.com/tekcapzule/campaign-service/actions/workflows/cicd.yml/badge.svg)](https://github.com/tekcapzule/campaign-service/actions/workflows/cicd.yml) 
-[![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_campaign-service&metric=bugs)](https://sonarcloud.io/project/overview?id=tekcapzule_campaign-service)
-[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_campaign-service&metric=vulnerabilities)](https://sonarcloud.io/project/overview?id=tekcapzule_campaign-service)
-[![SonarCloud Code Smell](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_campaign-service&metric=code_smells)](https://sonarcloud.io/project/overview?id=tekcapzule_campaign-service)
-[![SonarCloud Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_campaign-service&metric=ncloc)](https://sonarcloud.io/project/overview?id=tekcapzule_campaign-service)
-[![Github all releases](https://img.shields.io/github/downloads/tekcapzule/campaign-service/total.svg)](https://GitHub.com/tekcapzule/campaign-service/releases/)
+[![Main Branch](https://github.com/tekcapzule/media-converter-service/actions/workflows/.yml/badge.svg)](https://github.com/tekcapzule/media-converter-service/actions/workflows/cicd.yml) 
+[![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_media-converter-service&metric=bugs)](https://sonarcloud.io/project/overview?id=tekcapzule_media-converter-service)
+[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_media-converter-service&metric=vulnerabilities)](https://sonarcloud.io/project/overview?id=tekcapzule_media-converter-service)
+[![SonarCloud Code Smell](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_media-converter-service&metric=code_smells)](https://sonarcloud.io/project/overview?id=tekcapzule_media-converter-service)
+[![SonarCloud Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tekcapzule_media-converter-service&metric=ncloc)](https://sonarcloud.io/project/overview?id=tekcapzule_media-converter-service)
+[![Github all releases](https://img.shields.io/github/downloads/tekcapzule/media-converter-service/total.svg)](https://GitHub.com/tekcapzule/media-converter-service/releases/)
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
   <img src="https://github.com/tekcapzule/tekcapzule-web/assets/9839481/bc965502-9a3a-4eb0-bb56-f1e9c0f4a5b0.svg">
-  <h3 align="center">Campaign Service</h3>
+  <h3 align="center">MediaConverter Service</h3>
   <p align="center">
-    A set of lambda functions to manage Campaigns in TekCapzule
+    A set of lambda functions to manage Media convert in TekCapzule
     <br />
     <a href="https://www.tekcapzule.com/">View Demo</a> |
-    <a href="https://github.com/tekcapzule/campaign-service/issues">Report Bug</a> |
-    <a href="https://github.com/tekcapzule/campaign-service/issues">Request Feature</a>
+    <a href="https://github.com/tekcapzule/media-converter-service/issues">Report Bug</a> |
+    <a href="https://github.com/tekcapzule/media-converter-service/issues">Request Feature</a>
   </p>
 </div>
 <div align="center">
@@ -55,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project contains set of functions written in Java 11 to create, update, query and manage TekCapzule Campaigns. It is a multi-module maven project with two modules named application & domain. Application module is a springboot application that exposes these functions and domain module contains the domain logic.
+This project contains set of functions written in Java 11 to convert the videos uploaded into s bucket. It is a multi-module maven project with two modules named application & domain. Application module is a springboot application that exposes these functions and domain module contains the domain logic.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +87,7 @@ Please follow the step by step instructions to install the required softwares an
 1. Get the AWS Access Key details
 2. Clone the repo
    ```sh
-   git clone https://github.com/tekcapzule/campaign-service.git
+   git clone https://github.com/tekcapzule/media-converter-service.git
    ```
 3. Install SAM CLI by following instructions https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html
 4. Configure the following Environment variables
@@ -113,7 +113,7 @@ Note: SERVER_USERNAME and SERVER_PASSWORD details will be be provided by the mai
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/tekcapzule/campaign-service/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/tekcapzule/media-converter-service/issues) for a list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,7 +132,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 ## Contributors
-<img src= "https://contrib.rocks/image?repo=tekcapzule/campaign-service">
+<img src= "https://contrib.rocks/image?repo=tekcapzule/media-converter-service">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

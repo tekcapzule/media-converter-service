@@ -18,8 +18,8 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>campaign</id>
-                    <url>https://maven.pkg.github.com/tekcapzule/campaign-service</url>
+                    <id>mediaconverter</id>
+                    <url>https://maven.pkg.github.com/tekcapzule/media-converter-service</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -34,7 +34,7 @@
 
     <servers>
         <server>
-            <id>campaign</id>
+            <id>mediaconverter</id>
             <username>${env.SERVER_USERNAME}</username>
             <password>${env.SERVER_PASSWORD}</password>
         </server>

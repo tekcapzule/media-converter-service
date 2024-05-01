@@ -24,7 +24,6 @@ Globals:
       Resource: Lambda
     Environment:
       Variables:
-        TABLE: !Ref CampaignTable
         APPLICATION_ENVIRONMENT: !Ref Stage
         CLOUD_REGION: us-east-1
         MAIN_CLASS: com.tekcapzule.mediaconverter.application.MediaConverterApplication
@@ -34,10 +33,10 @@ Resources:
 
   # Setup API Gateway
 
-  CampaignApi:
+  ConvertMediaApi:
     Type: AWS::Serverless::Api
     Properties:
-      Name: !Sub "campaign-${Stage}"
+      Name: !Sub "media-converter-${Stage}"
       StageName: !Ref Stage
       Cors:
         AllowMethods: "'POST, GET'"
