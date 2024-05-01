@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tekcapzule</groupId>
+    <artifactId>mediaconverter-application</artifactId>
+    <version>1.0.6</version>
+    <packaging>pom</packaging>
+    <name>MediaCoverter Application</name>
+    <description>MediaCoverter Application</description>
+    <properties>
+        <sonar.organization>tekcapzule</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
+    <modules>
+        <module>application</module>
+        <module>domain</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>mediaconverter</id>
+            <name>GitHub TekCapzule Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/tekcapzule/mediaconverter-service</url>
+        </repository>
+    </distributionManagement>
+</project>
