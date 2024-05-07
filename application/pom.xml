@@ -55,7 +55,7 @@
         <dependency>
             <groupId>com.tekcapzule</groupId>
             <artifactId>mediaconverter-domain</artifactId>
-            <version>1.0.6</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
