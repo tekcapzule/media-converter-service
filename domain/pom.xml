@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.tekcapzule</groupId>
     <artifactId>mediaconverter-domain</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.0</version>
     <name>MediaConverter Domain</name>
     <description>MediaConverter Domain</description>
     <properties>
