@@ -53,11 +53,6 @@
             <version>1.0.3</version>
         </dependency>
         <dependency>
-            <groupId>com.tekcapzule</groupId>
-            <artifactId>mediaconverter-domain</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
