@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.tekcapzule</groupId>
     <artifactId>mediaconverter-service</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>MediaConverter Service</name>
     <description>MediaConverter Service</description>
     <properties>

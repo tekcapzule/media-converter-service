@@ -65,7 +65,7 @@ Resources:
             Path: mediaconverter/convertMedia
             Method: post
             RestApiId:
-              Ref: MediaConverterApi
+              Ref: ConvertMediaApi
 
   # Set Output Variable
 
