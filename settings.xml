@@ -19,7 +19,7 @@
                 </repository>
                 <repository>
                     <id>mediaconverter</id>
-                    <url>https://maven.pkg.github.com/tekcapzule/media-converter-service</url>
+                    <url>https://maven.pkg.github.com/tekcapzule/mediaconverter-service</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>

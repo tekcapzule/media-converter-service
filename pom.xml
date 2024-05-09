@@ -147,7 +147,7 @@
         <repository>
             <id>mediaconverter</id>
             <name>GitHub TekCapzule Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/tekcapzule/media-converter-service</url>
+            <url>https://maven.pkg.github.com/tekcapzule/mediaconverter-service</url>
         </repository>
     </distributionManagement>
 </project>

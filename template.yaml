@@ -17,7 +17,7 @@ Globals:
     Timeout: 20
     AutoPublishAlias: !Ref Stage
     Handler: org.springframework.cloud.function.adapter.aws.FunctionInvoker
-    CodeUri: ./application
+    CodeUri: ./
     Tags:
       Stage: !Ref Stage
       Service: MediaConverter
