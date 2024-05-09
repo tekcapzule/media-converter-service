@@ -11,6 +11,7 @@
     <groupId>com.tekcapzule</groupId>
     <artifactId>mediaconverter-service</artifactId>
     <version>1.0.2</version>
+    <packaging>jar</packaging>
     <name>MediaConverter Service</name>
     <description>MediaConverter Service</description>
     <properties>
@@ -145,7 +146,7 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>mediaconverter</id>
+            <id>mediaconverter-service</id>
             <name>GitHub TekCapzule Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/tekcapzule/mediaconverter-service</url>
         </repository>
