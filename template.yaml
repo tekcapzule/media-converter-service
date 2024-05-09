@@ -72,4 +72,4 @@ Resources:
 Outputs:
   ApiEndpoint:
     Description: "MediaConverter API endpoint."
-    Value: !Sub "https://${MediaConverterApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/mediaconverter"
+    Value: !Sub "https://${ConvertMediaApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/mediaconverter"
