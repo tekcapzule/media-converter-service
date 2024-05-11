@@ -25,47 +25,47 @@ public class ConvertMediaFunction implements Function<S3Event, String> {
         this.appConfig = appConfig;
     }
    // @Override
-    public String handleRequest(S3Event input, Context context) {
-        try {
-            // Initialize AWS MediaConvert client
-            MediaConvertClient mediaConvertClient = MediaConvertClient.builder().build();
-
-            String bucketName = input.getRecords().get(0).getS3().getBucket().getName();
-            String objectKey = input.getRecords().get(0).getS3().getObject().getKey();
-            System.out.println("S3Event ObjectKey"+objectKey);
-
-            // Construct the input file URI for MediaConvert job
-            String inputFileUri = "s3://" + bucketName + "/" + objectKey;
-            // Create audio selector with default selection
-            AudioSelector audioSelector =  AudioSelector.builder().defaultSelection(AudioDefaultSelection.DEFAULT).build();
-            Map<String,AudioSelector> audios = new HashMap<>();
-            audios.put("Audio Selector 1",audioSelector);
-
-            // Create a job settings object
-            CreateJobResponse createJobResponse = mediaConvertClient.createJob(CreateJobRequest.builder()
-                    .role("arn:aws:iam::552781593359:role/service-role/MediaConvert_Default_Role")
-                    .settings(JobSettings.builder()
-                            .outputGroups(
-                                    createOutputGroup("MobileGroup", "mobile/", "system-Avc_16x9_480p_29_97fps_800kbps")
-                                    //  createOutputGroup("TabletGroup", "tablet/", "System-Avc_16x9_720p_29_97fps_2000kbps"),
-                                    //createOutputGroup("WebGroup", "web/", "System-Avc_16x9_720p_29_97fps_4000kbps")
-                            )
-                            .inputs(Input.builder().fileInput(inputFileUri).audioSelectors(audios).build())
-                            .build())
-                    .build());
-
-            // Wait for the job to complete
-            waitForJobCompletion(mediaConvertClient, createJobResponse.job().id());
-
-            // Cleanup resources
-            mediaConvertClient.cancelJob(CancelJobRequest.builder().build());
-
-            return "Transcoding job completed successfully.";
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Error in transcoding job: " + e.getMessage();
-        }
-    }
+//    public String handleRequest(S3Event input, Context context) {
+//        try {
+//            // Initialize AWS MediaConvert client
+//            MediaConvertClient mediaConvertClient = MediaConvertClient.builder().build();
+//
+//            String bucketName = input.getRecords().get(0).getS3().getBucket().getName();
+//            String objectKey = input.getRecords().get(0).getS3().getObject().getKey();
+//            System.out.println("S3Event ObjectKey"+objectKey);
+//
+//            // Construct the input file URI for MediaConvert job
+//            String inputFileUri = "s3://" + bucketName + "/" + objectKey;
+//            // Create audio selector with default selection
+//            AudioSelector audioSelector =  AudioSelector.builder().defaultSelection(AudioDefaultSelection.DEFAULT).build();
+//            Map<String,AudioSelector> audios = new HashMap<>();
+//            audios.put("Audio Selector 1",audioSelector);
+//
+//            // Create a job settings object
+//            CreateJobResponse createJobResponse = mediaConvertClient.createJob(CreateJobRequest.builder()
+//                    .role("arn:aws:iam::552781593359:role/service-role/MediaConvert_Default_Role")
+//                    .settings(JobSettings.builder()
+//                            .outputGroups(
+//                                    createOutputGroup("MobileGroup", "mobile/", "system-Avc_16x9_480p_29_97fps_800kbps")
+//                                    //  createOutputGroup("TabletGroup", "tablet/", "System-Avc_16x9_720p_29_97fps_2000kbps"),
+//                                    //createOutputGroup("WebGroup", "web/", "System-Avc_16x9_720p_29_97fps_4000kbps")
+//                            )
+//                            .inputs(Input.builder().fileInput(inputFileUri).audioSelectors(audios).build())
+//                            .build())
+//                    .build());
+//
+//            // Wait for the job to complete
+//            waitForJobCompletion(mediaConvertClient, createJobResponse.job().id());
+//
+//            // Cleanup resources
+//            mediaConvertClient.cancelJob(CancelJobRequest.builder().build());
+//
+//            return "Transcoding job completed successfully.";
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return "Error in transcoding job: " + e.getMessage();
+//        }
+//    }
 
     private OutputGroup createOutputGroup(String groupName, String outputPrefix, String presetName) {
         return OutputGroup.builder()
@@ -124,9 +124,9 @@ public class ConvertMediaFunction implements Function<S3Event, String> {
                     .role("arn:aws:iam::552781593359:role/service-role/MediaConvert_Default_Role")
                     .settings(JobSettings.builder()
                             .outputGroups(
-                                    createOutputGroup("MobileGroup", "mobile/", "system-Avc_16x9_480p_29_97fps_800kbps")
-                                    //  createOutputGroup("TabletGroup", "tablet/", "System-Avc_16x9_720p_29_97fps_2000kbps"),
-                                    //createOutputGroup("WebGroup", "web/", "System-Avc_16x9_720p_29_97fps_4000kbps")
+                                    createOutputGroup("MobileGroup", "mobile/", "system-Avc_16x9_480p_29_97fps_800kbps"),
+                                      createOutputGroup("TabletGroup", "tablet/", "system-Avc_16x9_720p_29_97fps_2000kbps"),
+                                    createOutputGroup("WebGroup", "web/", "system-Avc_16x9_720p_29_97fps_4000kbps")
                             )
                             .inputs(Input.builder().fileInput(inputFileUri).audioSelectors(audios).build())
                             .build())
